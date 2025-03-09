@@ -58,7 +58,7 @@ def create_question_4(df):
             cluster.at[index,'kluster'] = "Menengah"
     return cluster
 
-df_merged = pd.read_csv('df_merged.csv')
+df_merged = pd.read_csv('dashboard/df_merged.csv')
 df_merged['month_year'] = df_merged['month'].astype(str).str.zfill(2) + '-' + df_merged['day'].astype(str).str.zfill(2) + '-' + df_merged['year'].astype(str).str.zfill(2)
 df_merged['month_year'] = pd.to_datetime(df_merged['month_year'])
 
